@@ -5,14 +5,12 @@ const mongoose = require("mongoose");
 
 const feedRoutes = require("./routes/feed");
 const authRoutes = require("./routes/auth");
-const { Socket } = require("socket.io");
 
 const MONGODB_URI =
   "mongodb+srv://karim:GSkHPKNMo64wzgb4@cluster0.fjr5qww.mongodb.net/Social-App";
 
 const app = express();
 
-// app.use(bodyParser.urlencoded()); // x-www-form-urlencoded <form>
 app.use(bodyParser.json()); // application/json
 
 app.use((req, res, next) => {
